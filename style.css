@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    font-size: calc(15px + 0.390625vw);
+
+    }
+    #chk{
+        display: none;
+    }
+    #chk:checked + label{
+        color: aqua;
+    }
+    label{
+        float:right;
+        display: none;
+        
+    }
+   nav{
+    clear: right;
+    background-color: rgb(2, 2, 50);
+    color:white
+   }
+   nav ul{
+    display: flex;
+    list-style: none;
+    
+   }
+   nav ul li{
+    padding: 1rem;
+   }
+   input[type=checkbox]:checked ~  nav ul{ display: none; }
+
+   @media screen and (max-width:992px) {
+
+
+label{
+    float:right;
+    display: block;
+    
+}
+nav ul {
+    text-align: center;
+   display:none;
+}
+input[type=checkbox]:checked ~  nav ul{ display:block; }
+   }
